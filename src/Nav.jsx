@@ -1,0 +1,70 @@
+import styled from "styled-components";
+import icon_blog from "./img/iconBlog.png";
+import icon_facebook from "./img/iconFacebook.png";
+import icon_instagram from "./img/iconInstagram.png";
+import icon_youtube from "./img/iconYoutube.png";
+import logo from "./img/logo.png";
+
+function Nav() {
+  return (
+    <NavContainer>
+      <NavDIv>
+        <div>
+          <img src={logo} alt="logo" style={{ width: "50%" }} />
+        </div>
+        <div>
+          <ShareIcons>
+            <Icon>
+              <img
+                src={icon_facebook}
+                alt="icon_facebook"
+                style={{ width: "60%" }}
+              />
+            </Icon>
+            <Icon>
+              <img
+                src={icon_instagram}
+                alt="icon_instagram"
+                style={{ width: "60%" }}
+              />
+            </Icon>
+            <Icon>
+              <img src={icon_blog} alt="icon_blog" style={{ width: "60%" }} />
+            </Icon>
+            <Icon>
+              <img
+                src={icon_youtube}
+                alt="icon_youtube"
+                style={{ width: "60%" }}
+              />
+            </Icon>
+          </ShareIcons>
+        </div>
+      </NavDIv>
+    </NavContainer>
+  );
+}
+export default Nav;
+const NavContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+`;
+const NavDIv = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  margin: 0px auto;
+  padding: 55px 50px 0px;
+  width: 1024px;
+  z-index: 999;
+`;
+const ShareIcons = styled.ul`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const Icon = styled.li`
+  list-style-type: none;
+`;
