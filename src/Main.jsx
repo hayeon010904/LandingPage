@@ -1,28 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
-import googleStore from "./img//img-googleplay.png";
-import appStore from "./img/img-appstore.png";
-import background1 from "./img/main1.jpg";
-import mainText1 from "./img/main_text_1.png";
-import mainText2 from "./img/main_text_2.png";
-import mainText3 from "./img/main_text_3.png";
-import mainText4 from "./img/main_text_4.png";
-import mainText5 from "./img/main_text_5.png";
-
-
-import qrcode from "./img/qrcode.png";
-const MainTextArr = [mainText1, mainText2, mainText3, mainText4, mainText5];
 function getRandomInt(max) {
   return Math.floor(Math.random() * (max + 1));
 }
+const randomIndex = getRandomInt(4);
+console.log(randomIndex);
+const imagePath = `./img/main_text_${randomIndex + 1}.png`;
 const Main = () => {
-  const randomIndex = getRandomInt(4);
   return (
     <MainContainer>
       <ImgContainer>
         <Contents>
-          <MainText src={MainTextArr[randomIndex]} alt="mainText1" />
+          <MainText src={imagePath} alt="mainText1" />
           <div
             style={{
               display: "flex",
@@ -38,10 +28,10 @@ const Main = () => {
               </p>
               <DownDiv>
                 <DownImgDiv>
-                  <DownImg src={appStore} alt="appStore" />
+                  <DownImg src="/img/img-appstore.png" alt="appStore" />
                 </DownImgDiv>
                 <DownImgDiv>
-                  <DownImg src={googleStore} alt="googleStore" />
+                  <DownImg src="/img/img-googleplay.png" alt="googleStore" />
                 </DownImgDiv>
               </DownDiv>
             </div>
@@ -59,7 +49,11 @@ const Main = () => {
                   <p style={{ color: "white", marginBottom: "1rem" }}>
                     QR코드 다운로드
                   </p>
-                  <img src={qrcode} alt="qrcode" style={{ width: "30%" }} />
+                  <img
+                    src="/img/qrcode.png"
+                    alt="qrcode"
+                    style={{ width: "30%" }}
+                  />
                 </div>
               </div>
             </div>
@@ -81,7 +75,8 @@ const MainContainer = styled.div`
 const ImgContainer = styled.div`
   width: 100vw;
   height: 100vh;
-  background-image: url(${background1});
+
+  background-image: url("./img/main${randomIndex + 1}.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%, 50%;

@@ -1,39 +1,43 @@
 import styled from "styled-components";
-import icon_blog from "./img/iconBlog.png";
-import icon_facebook from "./img/iconFacebook.png";
-import icon_instagram from "./img/iconInstagram.png";
-import icon_youtube from "./img/iconYoutube.png";
-import logo from "./img/logo.png";
+// import icon_blog from "./img/iconBlog.png";
+// import icon_facebook from "./img/iconFacebook.png";
+// import icon_instagram from "./img/iconInstagram.png";
+// import icon_youtube from "./img/iconYoutube.png";
+// import logo from "./img/logo.png";
 
 function Nav() {
   return (
     <NavContainer>
       <NavDIv>
         <div>
-          <img src={logo} alt="logo" style={{ width: "50%" }} />
+          <img src="./img/logo.png" alt="logo" style={{ width: "50%" }} />
         </div>
         <div>
           <ShareIcons>
             <Icon>
               <img
-                src={icon_facebook}
+                src="./img/iconFacebook.png"
                 alt="icon_facebook"
                 style={{ width: "60%" }}
               />
             </Icon>
             <Icon>
               <img
-                src={icon_instagram}
+                src="./img/iconInstagram.png"
                 alt="icon_instagram"
                 style={{ width: "60%" }}
               />
             </Icon>
             <Icon>
-              <img src={icon_blog} alt="icon_blog" style={{ width: "60%" }} />
+              <img
+                src="./img/iconBlog.png"
+                alt="icon_blog"
+                style={{ width: "60%" }}
+              />
             </Icon>
             <Icon>
               <img
-                src={icon_youtube}
+                src="./img/iconYoutube.png"
                 alt="icon_youtube"
                 style={{ width: "60%" }}
               />
