@@ -1,25 +1,8 @@
+import { Section, SectionsContainer } from "react-fullpage";
 import Detail from "./Detail";
 import Main from "./Main";
 import Nav from "./Nav";
 
-// import Section1Text from "./img/section1Text.png";
-// import Section2Text from "./img/section2Text.png";
-// import Section4Text from "./img/section4Text.png";
-// import Section5Text from "./img/section5Text.png";
-// import Section6Text from "./img/section6Text.png";
-// import Section7Text from "./img/section7Text.png";
-// import Section8Text from "./img/section8Text.png";
-
-// import Section1Img from "./img/section1Img.png";
-// import Section2Img from "./img/section2Img.png";
-// import Section3Img from "./img/section3Img.png";
-// import Section4Img from "./img/section4Img.png";
-// import Section5Img from "./img/section5Img.png";
-// import Section6Img from "./img/section6Img.png";
-// import Section7Img from "./img/section7Img.png";
-// import Section8Img from "./img/section8Img.png";
-
-import { Section, SectionsContainer } from "react-fullpage";
 let options = {
   anchors: [
     "section1",
@@ -34,9 +17,19 @@ let options = {
     "section10",
   ],
 };
+const jumpKeyframes = `
+  @keyframes jump {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-30px); }
+    60% { transform: translateY(0px); }
+    80% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+  }
+`;
 function App() {
   return (
     <div className="App">
+      <style>{jumpKeyframes}</style>
       <img
         src="img/icon-scroll.png"
         alt="scroll"
@@ -46,6 +39,7 @@ function App() {
           left: "50%",
           width: "4rem",
           zIndex: "999",
+          animation: "0.5s ease 0s 3 normal none running jump",
         }}
       />
       <Nav />

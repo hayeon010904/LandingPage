@@ -1,18 +1,32 @@
 import styled from "styled-components";
-// import icon_blog from "./img/iconBlog.png";
-// import icon_facebook from "./img/iconFacebook.png";
-// import icon_instagram from "./img/iconInstagram.png";
-// import icon_youtube from "./img/iconYoutube.png";
-// import logo from "./img/logo.png";
 
+import { motion } from "framer-motion";
 function Nav() {
   return (
     <NavContainer>
       <NavDIv>
-        <div>
+        <motion.div
+          className="box"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.5,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+        >
           <img src="./img/logo.png" alt="logo" style={{ width: "50%" }} />
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          className="box"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.5,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+        >
           <ShareIcons>
             <Icon>
               <img
@@ -43,7 +57,7 @@ function Nav() {
               />
             </Icon>
           </ShareIcons>
-        </div>
+        </motion.div>
       </NavDIv>
     </NavContainer>
   );

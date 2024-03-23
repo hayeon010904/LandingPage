@@ -73,14 +73,15 @@ const MainContainer = styled.div`
   background-color: rgb(42, 193, 188);
 `;
 const ImgContainer = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-
   background-image: url("./img/main${randomIndex + 1}.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%, 50%;
   inset: 0px;
+  transform: translateY(0px);
+  transition: transform 0.9s ease 0s;
 `;
 const Contents = styled.div`
   width: 1024px;
