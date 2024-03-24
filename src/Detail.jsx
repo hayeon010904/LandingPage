@@ -1,14 +1,11 @@
 import { motion, useAnimation } from "framer-motion";
-
+import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-
-import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 
 function Detail({ TextSrc, ImgSrc, descriptions }) {
-  const { ref, inView } = useInView();
+  const { ref: sectionRef, inView } = useInView();
   const controls = useAnimation();
-  const sectionRef = useRef(null);
 
   useEffect(() => {
     if (inView) {
@@ -17,32 +14,38 @@ function Detail({ TextSrc, ImgSrc, descriptions }) {
       controls.start("hidden");
     }
   }, [controls, inView]);
+
   const variants = {
     visible: { opacity: 1, x: 0 },
-    hidden: { opacity: 0, x: "-50%" },
+    hidden: { opacity: 1, x: "-50%" },
     initial: { opacity: 0, x: "-50%" },
     exit: { opacity: 1, x: 0 },
   };
 
-  const onAnimationComplete = (finished) => {
-    if (finished && inView && controls.current !== "visible") {
-      controls.set("visible"); // 애니메이션이 완료되고 이미지가 화면에 표시된 경우에만 이미지를 보이는 상태로 설정
-    }
-  };
+  // const onAnimationComplete = (finished) => {
+  //   if (finished && inView && controls.current !== "visible") {
+  //     controls.set("visible"); // 애니메이션이 완료되고 이미지가 화면에 표시된 경우에만 이미지를 보이는 상태로 설정
+  //   }
+  // };
   return (
     <Page>
-      <Contents ref={ref}>
+      <Contents ref={sectionRef}>
         <MainText src={TextSrc} alt="img" />
         <div>{descriptions}</div>
         <MotionSectionImg
-          ref={sectionRef}
           src={ImgSrc}
           alt="sectionimg"
-          animate={inView ? "visible" : "hidden"} // 수정된 부
+          // animate={inView ? "visible" : "hidden"} // 변경된 부분
+          animate={controls} // 수정된 부
           variants={variants}
           initial="initial"
           exit="exit"
-          onAnimationComplete={onAnimationComplete} // 애니메이션이 완료된 후 호출될 콜백
+          // onAnimationComplete={() => {
+          //   if (inView) {
+          //     controls.set("visible");
+          //   }
+          // }}
+          // onAnimationComplete={onAnimationComplete} // 애니메이션이 완료된 후 호출될 콜백
         />
       </Contents>
     </Page>
