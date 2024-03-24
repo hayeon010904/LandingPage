@@ -28,28 +28,34 @@ function Nav() {
           }}
         >
           <ShareIcons>
-            <Icon>
+            <Icon href="https://www.facebook.com/smartbaedal" target="_blank">
               <img
                 src="./img/iconFacebook.png"
                 alt="icon_facebook"
                 style={{ width: "60%" }}
               />
             </Icon>
-            <Icon>
+            <Icon
+              href="https://www.instagram.com/baemin_official/"
+              target="_blank"
+            >
               <img
                 src="./img/iconInstagram.png"
                 alt="icon_instagram"
                 style={{ width: "60%" }}
               />
             </Icon>
-            <Icon>
+            <Icon href="https://blog.naver.com/smartbaedal" target="_blank">
               <img
                 src="./img/iconBlog.png"
                 alt="icon_blog"
                 style={{ width: "60%" }}
               />
             </Icon>
-            <Icon>
+            <Icon
+              href="https://www.youtube.com/user/smartbaedal2"
+              target="_blank"
+            >
               <img
                 src="./img/iconYoutube.png"
                 alt="icon_youtube"
@@ -83,6 +89,6 @@ const ShareIcons = styled.ul`
   justify-content: center;
   align-items: center;
 `;
-const Icon = styled.li`
+const Icon = styled.a`
   list-style-type: none;
 `;

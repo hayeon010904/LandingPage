@@ -27,10 +27,16 @@ const Main = () => {
                 앱스토어 다운로드
               </p>
               <DownDiv>
-                <DownImgDiv>
+                <DownImgDiv
+                  href="https://apps.apple.com/us/app/%EB%B0%B0%EB%8B%AC%EC%9D%98%EB%AF%BC%EC%A1%B1/id378084485"
+                  target="_blank"
+                >
                   <DownImg src="/img/img-appstore.png" alt="appStore" />
                 </DownImgDiv>
-                <DownImgDiv>
+                <DownImgDiv
+                  href="https://play.google.com/store/apps/details?id=com.sampleapp"
+                  target="_blank"
+                >
                   <DownImg src="/img/img-googleplay.png" alt="googleStore" />
                 </DownImgDiv>
               </DownDiv>
@@ -98,7 +104,7 @@ const DownDiv = styled.div`
   justify-content: space-around;
   margin-top: 1rem;
 `;
-const DownImgDiv = styled.div`
+const DownImgDiv = styled.a`
   background-color: white;
   border-radius: 50px;
   width: 45%;
