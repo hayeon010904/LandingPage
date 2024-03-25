@@ -80,42 +80,120 @@ function App() {
           <Detail
             TextSrc="/img/section3Text.png"
             ImgSrc="/img/section3Img.png"
-            descriptions=""
+            descriptions={
+              <>
+                <span>
+                  배달의민족만의 특별한 AI배차 기술로
+                  <br />
+                  가까운 주문은 함께, 최적의 길로 배달해요.
+                  <br />
+                  실속을 챙기고 싶을 땐 알뜰배달로 주문하세요.
+                </span>
+                <br />
+                <br />
+                <span>
+                  알뜰배달 서비스는 현재 전국 일부 지역에서 서비스 중입니다.
+                  <br />더 많은 지역으로 확장 준비 중이니 조금만 기다려 주세요.
+                </span>
+              </>
+            }
           />
         </Section>
         <Section>
           <Detail
             TextSrc="/img/section4Text.png"
             ImgSrc="/img/section4Img.png"
-            descriptions=""
+            descriptions={
+              <>
+                <span>
+                  마트에 직접 가지 않아도, 내일까지 기다리지 않아도
+                  <br />
+                  식자재부터 생필품까지 바로 배달해 드립니다.
+                </span>
+                <br />
+                <br />
+                <span>
+                  배민B마트는 현재 전국 일부지역에서 서비스 중입니다.
+                  <br />더 많은 지역으로 확장 준비 중이니 조금만 기다려 주세요.
+                </span>
+              </>
+            }
           />
         </Section>
         <Section>
           <Detail
             TextSrc="/img/section5Text.png"
             ImgSrc="/img/section5Img.png"
-            descriptions=""
+            descriptions={
+              <>
+                <span>
+                  전국민의 삼시세끼를 해결하던 음식 배달의 기술로
+                  <br />
+                  일상 속 다양한 상품을 배달합니다.
+                  <br />
+                  뷰티, 가전, 책, 꽃, 식료품까지 이제 배송 말고 배달하세요.
+                </span>
+                <br />
+                <br />
+                <span>
+                  배민스토어는 현재 전국 일부 지역에서 서비스 중입니다.
+                  <br />더 많은 지역으로 확장 준비 중이니 조금만 기다려 주세요.
+                </span>
+              </>
+            }
           />
         </Section>
         <Section>
           <Detail
             TextSrc="/img/section6Text.png"
             ImgSrc="/img/section6Img.png"
-            descriptions=""
+            descriptions={
+              <>
+                <span>
+                  전국민의 삼시세끼를 해결하던 음식 배달의 기술로
+                  <br />
+                  일상 속 다양한 상품을 배달합니다.
+                  <br />
+                  뷰티, 가전, 책, 꽃, 식료품까지 이제 배송 말고 배달하세요.
+                </span>
+                <br />
+                <br />
+                <span>
+                  배민스토어는 현재 전국 일부 지역에서 서비스 중입니다.
+                  <br />더 많은 지역으로 확장 준비 중이니 조금만 기다려 주세요.
+                </span>
+              </>
+            }
           />
         </Section>
         <Section>
           <Detail
             TextSrc="/img/section7Text.png"
             ImgSrc="/img/section7Img.png"
-            descriptions=""
+            descriptions={
+              <>
+                <span>
+                  지금 밥 한 끼 보내주고 싶은 분께
+                  <br />
+                  배민 상품권을 선물하세요
+                </span>
+              </>
+            }
           />
         </Section>
         <Section>
           <Detail
             TextSrc="/img/section8Text.png"
             ImgSrc="/img/section8Img.png"
-            descriptions="내 계좌/카드를 등록하거나 배민 페이머니를 미리 충전하면 복잡한 결제를 한버에 끝낼 수 있어요"
+            descriptions={
+              <>
+                <span>
+                  내 계좌/카드를 등록하거나 배민페이머니를 미리 충전하면
+                  <br />
+                  복잡한 결제를 한 번에 끝낼 수 있어요
+                </span>
+              </>
+            }
           />
         </Section>
         <Section>

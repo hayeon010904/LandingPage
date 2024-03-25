@@ -8,7 +8,7 @@ function Detail({ TextSrc, ImgSrc, descriptions }) {
   const controls = useAnimation();
 
   const { ref: sectionRef, inView } = useInView({
-    threshold: 0.5,
+    threshold: 0.8,
   });
 
   useEffect(() => {
@@ -39,7 +39,7 @@ function Detail({ TextSrc, ImgSrc, descriptions }) {
     <Page>
       <Contents ref={sectionRef}>
         <MainText src={TextSrc} alt="img" />
-        <div>{descriptions}</div>
+        <DesDiv>{descriptions}</DesDiv>
         <MotionSectionImg
           src={ImgSrc}
           alt="sectionimg"
@@ -82,3 +82,9 @@ const SectionImg = styled(motion.img)`
   top: -5%;
 `;
 const MotionSectionImg = styled(SectionImg)``;
+const DesDiv = styled.div`
+  color: #ffffff63;
+  margin-top: 1rem;
+  font-weight: 100;
+  line-height: 1.5;
+`;
