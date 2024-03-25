@@ -14,7 +14,6 @@ let options = {
     "section7",
     "section8",
     "section9",
-    "section10",
   ],
 };
 const jumpKeyframes = `
@@ -194,13 +193,6 @@ function App() {
                 </span>
               </>
             }
-          />
-        </Section>
-        <Section>
-          <Detail
-            TextSrc="/img/section9Text.png"
-            ImgSrc="/img/section9Img.png"
-            descriptions={"오늘도 당신에게 행복을 배달 중입니다"}
           />
         </Section>
       </SectionsContainer>
